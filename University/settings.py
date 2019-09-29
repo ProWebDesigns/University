@@ -25,7 +25,7 @@ SECRET_KEY = '37$8zm83r0g0wt(x-vf17j9$+wo=&iq*op!qgers0b*-ti5@xx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['admin-bfcompany.com']
+ALLOWED_HOSTS = ['admin-bfcompany.com', '127.0.0.1']
 
 
 # Application definition
@@ -74,21 +74,21 @@ WSGI_APPLICATION = 'University.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': 'University.db'
-#}
-#}
-
 DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.mysql',
-		'OPTIONS': {
-			'read_default_file': '/University/auth/mysql.cnf',
-		},
-	}
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'University.db'
 }
+}
+
+#DATABASES = {
+#	'default': {
+#		'ENGINE': 'django.db.backends.mysql',
+#		'OPTIONS': {
+#			'read_default_file': '/University/auth/mysql.cnf',
+#		},
+#	}
+#}
 
 
 # Password validation

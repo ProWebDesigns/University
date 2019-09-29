@@ -7,7 +7,7 @@ from django.db import models
 class Student(models.Model):
     LastName = models.CharField(max_length=35)
     SecLastName = models.CharField(max_length=35)
-    Name = models.CharField(max_length=35)
+    Names = models.CharField(max_length=35)
     PIN = models.CharField(max_length=8)
     DOB = models.DateField()
     GENDERS = (('F', 'FEMALE'), ('M','MALE'))
@@ -15,7 +15,7 @@ class Student(models.Model):
 
     def FullName(self):
         String = "{0} {1} {2}"
-        return String.format(self.LastName, self.SecLastName, self.Name)
+        return String.format(self.LastName, self.SecLastName, self.Names)
 
     def __str__(self):
         return self.FullName()
