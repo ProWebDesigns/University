@@ -8,7 +8,7 @@ class Student(models.Model):
     LastName = models.CharField(max_length=35)
     SecLastName = models.CharField(max_length=35)
     Names = models.CharField(max_length=35)
-    PIN = models.CharField(max_length=8)
+    PIN = models.CharField(max_length=4)
     DOB = models.DateField()
     GENDERS = (('F', 'FEMALE'), ('M','MALE'))
     Gender = models.CharField(max_length=1, choices=GENDERS, default='M')

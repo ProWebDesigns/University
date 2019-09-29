@@ -25,6 +25,7 @@ SECRET_KEY = '37$8zm83r0g0wt(x-vf17j9$+wo=&iq*op!qgers0b*-ti5@xx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = ['admin-bfcompany.com', '127.0.0.1']
 
 
