@@ -74,21 +74,23 @@ WSGI_APPLICATION = 'University.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'University.db'
 }
 }
+"""
 
-#DATABASES = {
-#	'default': {
-#		'ENGINE': 'django.db.backends.mysql',
-#		'OPTIONS': {
-#			'read_default_file': '/University/auth/mysql.cnf',
-#		},
-#	}
-#}
+DATABASES = {
+	'default': {
+		'ENGINE': 'django.db.backends.mysql',
+		'OPTIONS': {
+			'read_default_file': '/University/auth/mysql.cnf',
+		},
+	}
+}
 
 
 # Password validation
