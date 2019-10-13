@@ -4,11 +4,11 @@ from django.core.validators import RegexValidator
 # Create your models here.
 
 class Student(models.Model):
-    LastName = models.CharField(max_length=35, validators=[RegexValidator('^[A-ZÑ_ ]*$',
+    LastName = models.CharField(max_length=35, validators=[RegexValidator('^[A-ZÑ ]*$',
                                'Only uppercase letters and underscores allowed.')])
-    SecLastName = models.CharField(max_length=35, blank = True, validators=[RegexValidator('^[A-ZÑ_ ]*$',
+    SecLastName = models.CharField(max_length=35, blank = True, validators=[RegexValidator('^[A-ZÑ ]*$',
                                'Only uppercase letters and underscores allowed.')])
-    Names = models.CharField(max_length=35,  validators=[RegexValidator('^[A-ZÑ_ ]*$',
+    Names = models.CharField(max_length=35,  validators=[RegexValidator('^[A-ZÑ ]*$',
                                'Only uppercase letters and underscores allowed.')])
     PIN = models.CharField(max_length=4)
     DOB = models.DateField()
