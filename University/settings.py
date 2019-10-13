@@ -80,9 +80,6 @@ DATABASES = {
     'default': {
         'ENGINE' : 'django.db.backends.mysql',
         'NAME' : 'University',
-        'USER' : 'root',
-        'HOST': '',
-        'PORT' : '',
  
     }
 }
