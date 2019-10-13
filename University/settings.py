@@ -75,14 +75,24 @@ WSGI_APPLICATION = 'University.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-
+#Database Config Deploy
 DATABASES = {
-    'default': {
-        'ENGINE' : 'django.db.backends.mysql',
-        'NAME' : 'University',
- 
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.mysql',
+       'OPTIONS': {
+           'read_default_file': '/University/auth/mysql.cnf',
+       },
+   }
 }
+
+#Database Config Design
+#DATABASES = {
+#    'default': {
+#        'ENGINE' : 'django.db.backends.mysql',
+#        'NAME' : 'University',
+ 
+#    }
+#}
  
 
 
