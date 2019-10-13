@@ -1,13 +1,15 @@
 from django.db import models
-
+from django.core.validators import RegexValidator
 
 # Create your models here.
 
-
 class Student(models.Model):
-    LastName = models.CharField(max_length=35)
-    SecLastName = models.CharField(max_length=35)
-    Names = models.CharField(max_length=35)
+    LastName = models.CharField(max_length=35, validators=[RegexValidator('^[A-Z_ ]*$',
+                               'Only uppercase letters and underscores allowed.')])
+    SecLastName = models.CharField(max_length=35, blank = True, validators=[RegexValidator('^[A-Z_ ]*$',
+                               'Only uppercase letters and underscores allowed.')])
+    Names = models.CharField(max_length=35,  validators=[RegexValidator('^[A-Z_ ]*$',
+                               'Only uppercase letters and underscores allowed.')])
     PIN = models.CharField(max_length=4)
     DOB = models.DateField()
     GENDERS = (('F', 'FEMALE'), ('M','MALE'))
@@ -23,6 +25,7 @@ class Student(models.Model):
 class Course(models.Model):
     Name = models.CharField(max_length=50)
     Credits = models.PositiveSmallIntegerField()
+    DOC = models.DateTimeField(auto_now_add=True)
     Status = models.BooleanField(default=True)
 
     def __str__(self):
