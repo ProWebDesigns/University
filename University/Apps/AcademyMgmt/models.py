@@ -3,7 +3,7 @@ from django.core.validators import RegexValidator
 
 
 validchars = "[A-ZÑ\\- ]"
-errormsg   = 'Only uppercase letter and spaces are allowed'
+errormsg   = 'Only uppercase letter, dashes and spaces are allowed'
 
 # Create your models here.
 
