@@ -1,15 +1,16 @@
 from django.db import models
 from django.core.validators import RegexValidator
 
+
+validchars = "[A-ZÑ\\- ]"
+errormsg   = 'Only uppercase letter and spaces are allowed'
+
 # Create your models here.
 
 class Student(models.Model):
-    LastName = models.CharField(max_length=35, validators=[RegexValidator('^[A-ZÑ ]*$',
-                               'Only uppercase letters and underscores allowed.')])
-    SecLastName = models.CharField(max_length=35, blank = True, validators=[RegexValidator('^[A-ZÑ ]*$',
-                               'Only uppercase letters and underscores allowed.')])
-    Names = models.CharField(max_length=35,  validators=[RegexValidator('^[A-ZÑ ]*$',
-                               'Only uppercase letters and underscores allowed.')])
+    LastName = models.CharField(max_length=35, validators=[RegexValidator(validchars, errormsg)])
+    SecLastName = models.CharField(max_length=35, blank = True, validators=[RegexValidator(validchars, errormsg)])
+    Names = models.CharField(max_length=35,  validators=[RegexValidator(validchars, errormsg)])
     PIN = models.CharField(max_length=4)
     DOB = models.DateField()
     GENDERS = (('F', 'FEMALE'), ('M','MALE'))

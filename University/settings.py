@@ -26,7 +26,7 @@ SECRET_KEY = '37$8zm83r0g0wt(x-vf17j9$+wo=&iq*op!qgers0b*-ti5@xx'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['admin-bfcompany.com', '127.0.0.1']
+ALLOWED_HOSTS = ['admin-bfcompany.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -76,26 +76,27 @@ WSGI_APPLICATION = 'University.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 #Database Config Deploy
-DATABASES = {
-   'default': {
-       'ENGINE': 'django.db.backends.mysql',
-       'OPTIONS': {
-           'read_default_file': '/University/auth/mysql.cnf',
-       },
-   }
-}
-
-#Database Config Design
 # DATABASES = {
-#      'default': {
-#         'ENGINE' : 'django.db.backends.mysql',
-#         'NAME' : 'University',
-#         'USER' : 'root',
-#         'HOST': '',
-#         'PORT' : '',
-
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'OPTIONS': {
+#            'read_default_file': '/University/auth/mysql.cnf',
+#        },
 #    }
 # }
+
+#Database Config Design
+DATABASES = {
+     'default': {
+        'ENGINE' : 'django.db.backends.mysql',
+        'NAME' : 'University',
+        'USER' : 'hugh',
+        'PASSWORD' : 'Admin007',
+        'HOST': '',
+        'PORT' : '',
+
+   }
+}
  
 
 
